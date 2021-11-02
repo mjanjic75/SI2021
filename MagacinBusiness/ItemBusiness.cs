@@ -16,5 +16,19 @@ namespace MagacinBusiness
         {
             return this.itemRepository.GetAllItems();
         }
+
+        public string InsertItem(Item item)
+        {
+            int rowsAffected = this.itemRepository.InsertItem(item);
+
+            if (rowsAffected > 0)
+            {
+                return "Uspešan unos u bazu podataka!";
+            }
+            else
+            {
+                return "Neuspešan unos, došlo je do greške!";
+            }
+        }
     }
 }

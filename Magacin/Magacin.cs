@@ -42,5 +42,25 @@ namespace Magacin
         {
 
         }
+
+        private void button_itemInsert_Click(object sender, EventArgs e)
+        {
+            Item item = new Item();
+
+            item.Name = textBox_itemName.Text;
+            item.Price = Convert.ToDecimal(textBox_itemPrice.Text);
+            item.Discount = Convert.ToInt32(textBox_itemDiscount.Text);
+
+            label_insertConfirm.Text = this.itemBusiness.InsertItem(item);
+
+            // textBox_itemName.Text = "";
+            textBox_itemPrice.Text = "";
+            textBox_itemDiscount.Text = "";
+
+            // Može da se koristi i Clear() metoda:
+            textBox_itemName.Clear();
+
+            GetAllItems();
+        }
     }
 }

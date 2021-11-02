@@ -34,9 +34,10 @@ namespace Magacin
             this.label_itemPrice = new System.Windows.Forms.Label();
             this.label_itemDiscount = new System.Windows.Forms.Label();
             this.textBox_itemName = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox_itemPrice = new System.Windows.Forms.TextBox();
+            this.textBox_itemDiscount = new System.Windows.Forms.TextBox();
             this.button_itemInsert = new System.Windows.Forms.Button();
+            this.label_insertConfirm = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // listBoxItems
@@ -82,19 +83,19 @@ namespace Magacin
             this.textBox_itemName.Size = new System.Drawing.Size(184, 22);
             this.textBox_itemName.TabIndex = 4;
             // 
-            // textBox2
+            // textBox_itemPrice
             // 
-            this.textBox2.Location = new System.Drawing.Point(121, 297);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(184, 22);
-            this.textBox2.TabIndex = 5;
+            this.textBox_itemPrice.Location = new System.Drawing.Point(121, 297);
+            this.textBox_itemPrice.Name = "textBox_itemPrice";
+            this.textBox_itemPrice.Size = new System.Drawing.Size(184, 22);
+            this.textBox_itemPrice.TabIndex = 5;
             // 
-            // textBox3
+            // textBox_itemDiscount
             // 
-            this.textBox3.Location = new System.Drawing.Point(121, 338);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(184, 22);
-            this.textBox3.TabIndex = 6;
+            this.textBox_itemDiscount.Location = new System.Drawing.Point(121, 338);
+            this.textBox_itemDiscount.Name = "textBox_itemDiscount";
+            this.textBox_itemDiscount.Size = new System.Drawing.Size(184, 22);
+            this.textBox_itemDiscount.TabIndex = 6;
             // 
             // button_itemInsert
             // 
@@ -104,6 +105,15 @@ namespace Magacin
             this.button_itemInsert.TabIndex = 7;
             this.button_itemInsert.Text = "INSERT";
             this.button_itemInsert.UseVisualStyleBackColor = true;
+            this.button_itemInsert.Click += new System.EventHandler(this.button_itemInsert_Click);
+            // 
+            // label_insertConfirm
+            // 
+            this.label_insertConfirm.AutoSize = true;
+            this.label_insertConfirm.Location = new System.Drawing.Point(371, 377);
+            this.label_insertConfirm.Name = "label_insertConfirm";
+            this.label_insertConfirm.Size = new System.Drawing.Size(0, 13);
+            this.label_insertConfirm.TabIndex = 8;
             // 
             // Magacin
             // 
@@ -111,9 +121,10 @@ namespace Magacin
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Turquoise;
             this.ClientSize = new System.Drawing.Size(821, 473);
+            this.Controls.Add(this.label_insertConfirm);
             this.Controls.Add(this.button_itemInsert);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox_itemDiscount);
+            this.Controls.Add(this.textBox_itemPrice);
             this.Controls.Add(this.textBox_itemName);
             this.Controls.Add(this.label_itemDiscount);
             this.Controls.Add(this.label_itemPrice);
@@ -135,9 +146,10 @@ namespace Magacin
         private System.Windows.Forms.Label label_itemPrice;
         private System.Windows.Forms.Label label_itemDiscount;
         private System.Windows.Forms.TextBox textBox_itemName;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox_itemPrice;
+        private System.Windows.Forms.TextBox textBox_itemDiscount;
         private System.Windows.Forms.Button button_itemInsert;
+        private System.Windows.Forms.Label label_insertConfirm;
     }
 }
 

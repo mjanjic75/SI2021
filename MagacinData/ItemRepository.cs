@@ -41,5 +41,22 @@ namespace MagacinData
 
             return listOfItems;
         }
+
+        public int InsertItem(Item item)
+        {
+            // Postoji lakši način za konektovanje na bazu i automatsko zatvaranje konekcije
+            using (SqlConnection sqlConnection = new SqlConnection(connString))
+            {
+                sqlConnection.Open();
+
+                SqlCommand command = new SqlCommand();
+                command.Connection = sqlConnection;
+                command.CommandText = string.Format("INSERT INTO Items VALUES('{0}',{1},{2})",
+                    item.Name, item.Price, item.Discount);
+
+                return command.ExecuteNonQuery();
+            }
+
+        }
     }
 }

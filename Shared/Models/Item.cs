@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MagacinData.Models
+namespace Shared.Models
 {
     public class Item
     {

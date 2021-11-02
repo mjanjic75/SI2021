@@ -1,5 +1,4 @@
-﻿using MagacinData.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -8,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MagacinData
 {
-    public class ItemRepository
+    public class ItemRepository : IItemRepository
     {
         private string connString = "Data Source=(localdb)\\ProjectsV13;Initial Catalog=MagacinDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         public List<Item> GetAllItems()

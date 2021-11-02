@@ -34,8 +34,13 @@ namespace Magacin
 
             foreach (Item item in listOfItems)
             {
-                listBoxItems.Items.Add(item.Name + ": " + item.Price + " – " + item.Discount);
+                listBoxItems.Items.Add(item.Name + ":\t" + item.Price + "\t-\t" + item.Discount);
             }
+        }
+
+        private void listBoxItems_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

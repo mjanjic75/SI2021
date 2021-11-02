@@ -46,6 +46,7 @@ namespace Magacin
             this.listBoxItems.Name = "listBoxItems";
             this.listBoxItems.Size = new System.Drawing.Size(781, 199);
             this.listBoxItems.TabIndex = 0;
+            this.listBoxItems.SelectedIndexChanged += new System.EventHandler(this.listBoxItems_SelectedIndexChanged);
             // 
             // label_itemName
             // 

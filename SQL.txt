@@ -1,0 +1,16 @@
+CREATE TABLE [dbo].[Items] (
+    [Id]       INT             IDENTITY (1, 1) NOT NULL,
+    [Name]     NVARCHAR (50)   NOT NULL,
+    [Price]    DECIMAL (18, 2) NOT NULL,
+    [Discount] INT             NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+
+
+SET IDENTITY_INSERT [dbo].[Items] ON
+INSERT INTO [dbo].[Items] ([Id], [Name], [Price], [Discount]) VALUES (1, N'Kafa Grand 100g', CAST(126.55 AS Decimal(18, 2)), 10)
+INSERT INTO [dbo].[Items] ([Id], [Name], [Price], [Discount]) VALUES (2, N'Čokolada Milka 300g lešnik', CAST(425.80 AS Decimal(18, 2)), 25)
+INSERT INTO [dbo].[Items] ([Id], [Name], [Price], [Discount]) VALUES (4, N'Čokolada Najlepše želje 300g', CAST(265.90 AS Decimal(18, 2)), 15)
+INSERT INTO [dbo].[Items] ([Id], [Name], [Price], [Discount]) VALUES (5, N'Pivo Heineken 0.5L limenka', CAST(110.00 AS Decimal(18, 2)), 10)
+SET IDENTITY_INSERT [dbo].[Items] OFF

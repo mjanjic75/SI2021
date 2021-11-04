@@ -1,4 +1,8 @@
-﻿using System;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Shared.Interfaces;
+using MagacinData;
+using MagacinBusiness;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +20,22 @@ namespace Magacin
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Magacin());
+
+            var services = new ServiceCollection();
+            ConfigureServices(services);
+
+            using(ServiceProvider serviceProvider = services.BuildServiceProvider())
+            {
+                var magacin = serviceProvider.GetRequiredService<Magacin>();
+                Application.Run(magacin);
+            }            
+        }
+
+        private static void ConfigureServices(ServiceCollection services)
+        {
+            services.AddScoped<IItemRepository, ItemRepository>();
+            services.AddScoped<IItemBusiness, ItemBusiness>();
+            services.AddScoped<Magacin>();
         }
     }
 }

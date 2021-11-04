@@ -1,5 +1,7 @@
 ﻿using MagacinBusiness;
-using MagacinData.Models;
+using MagacinData;
+using Shared.Interfaces;
+using Shared.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,10 +16,11 @@ namespace Magacin
 {
     public partial class Magacin : Form
     {
-        private ItemBusiness itemBusiness = new ItemBusiness();
+        private readonly IItemBusiness itemBusiness;
 
-        public Magacin()
+        public Magacin(IItemBusiness _itemBusiness)
         {
+            itemBusiness = _itemBusiness;
             InitializeComponent();
         }
 

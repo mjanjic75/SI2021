@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Shared.Interfaces;
+using Shared.Models;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -9,12 +11,11 @@ namespace MagacinData
 {
     public class ItemRepository : IItemRepository
     {
-        private string connString = "Data Source=(localdb)\\ProjectsV13;Initial Catalog=MagacinDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         public List<Item> GetAllItems()
         {
             SqlConnection sqlConnection = new SqlConnection();
 
-            sqlConnection.ConnectionString = connString;
+            sqlConnection.ConnectionString = Constants.connString;
             sqlConnection.Open();
 
             SqlCommand command = new SqlCommand();
@@ -44,7 +45,7 @@ namespace MagacinData
         public int InsertItem(Item item)
         {
             // Postoji lakši način za konektovanje na bazu i automatsko zatvaranje konekcije
-            using (SqlConnection sqlConnection = new SqlConnection(connString))
+            using (SqlConnection sqlConnection = new SqlConnection(Constants.connString))
             {
                 sqlConnection.Open();
 

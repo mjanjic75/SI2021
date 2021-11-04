@@ -41,16 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IItemBusiness.cs" />
     <Compile Include="Interfaces\IItemRepository.cs" />
     <Compile Include="Models\Item.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\MagacinData\MagacinData.csproj">
-      <Project>{CD03155B-9DBE-446D-8E59-19E14B680390}</Project>
-      <Name>MagacinData</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

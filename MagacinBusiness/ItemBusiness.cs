@@ -1,5 +1,6 @@
 ﻿using MagacinData;
-using MagacinData.Models;
+using Shared.Interfaces;
+using Shared.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,9 +9,14 @@ using System.Threading.Tasks;
 
 namespace MagacinBusiness
 {
-    public class ItemBusiness
+    public class ItemBusiness : IItemBusiness
     {
-        ItemRepository itemRepository = new ItemRepository();
+        private readonly IItemRepository itemRepository;
+
+        public ItemBusiness(IItemRepository _itemRepository)
+        {
+            itemRepository = _itemRepository;
+        }
 
         public List<Item> GetAllItems()
         {

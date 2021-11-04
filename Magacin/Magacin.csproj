@@ -88,6 +88,15 @@
       <Project>{CD03155B-9DBE-446D-8E59-19E14B680390}</Project>
       <Name>MagacinData</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Shared\Shared.csproj">
+      <Project>{262782fb-8066-47d3-b08c-5844eeb0c874}</Project>
+      <Name>Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection">
+      <Version>5.0.2</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -5,7 +5,8 @@
 
     <br />
 
-    <asp:ListBox ID="ListBox_ShopItems" runat="server" Height="320px" Width="920px"></asp:ListBox>
+    <asp:ListBox ID="ListBox_ShopItems" runat="server" Height="320px" Width="920px"
+        style="max-width:920px;"></asp:ListBox>
 
    
 

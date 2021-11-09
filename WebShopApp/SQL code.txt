@@ -1,0 +1,18 @@
+CREATE TABLE [dbo].[ShopItems] (
+    [Id]                  INT             IDENTITY (1, 1) NOT NULL,
+    [ShopItemName]        NVARCHAR (50)   NOT NULL,
+    [ShopItemDescription] NVARCHAR (150)  NULL,
+    [ShopItemCathegory]   NVARCHAR (50)   NOT NULL,
+    [ShopItemPrice]       DECIMAL (18, 2) NOT NULL,
+    [ShopItemDiscount]    BIT             NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+
+SET IDENTITY_INSERT [dbo].[ShopItems] ON
+INSERT INTO [dbo].[ShopItems] ([Id], [ShopItemName], [ShopItemDescription], [ShopItemCathegory], [ShopItemPrice], [ShopItemDiscount]) VALUES (1, N'Vino', N'Tamjanika 0.7', N'Alkoholna pića', CAST(679.90 AS Decimal(18, 2)), 0)
+INSERT INTO [dbo].[ShopItems] ([Id], [ShopItemName], [ShopItemDescription], [ShopItemCathegory], [ShopItemPrice], [ShopItemDiscount]) VALUES (2, N'Pivo', N'Heineken limenka 0.5', N'Alkoholna pića', CAST(98.90 AS Decimal(18, 2)), 1)
+INSERT INTO [dbo].[ShopItems] ([Id], [ShopItemName], [ShopItemDescription], [ShopItemCathegory], [ShopItemPrice], [ShopItemDiscount]) VALUES (3, N'Sirup jagoda', N'Voćni sirup od jagode', N'Voćni sokovi', CAST(289.90 AS Decimal(18, 2)), 1)
+INSERT INTO [dbo].[ShopItems] ([Id], [ShopItemName], [ShopItemDescription], [ShopItemCathegory], [ShopItemPrice], [ShopItemDiscount]) VALUES (4, N'Jabuka Ajdared', N'Jabuka', N'Voće', CAST(89.99 AS Decimal(18, 2)), 0)
+INSERT INTO [dbo].[ShopItems] ([Id], [ShopItemName], [ShopItemDescription], [ShopItemCathegory], [ShopItemPrice], [ShopItemDiscount]) VALUES (5, N'Čips Chipsway XL', N'Čačanski čip 150g', N'Grickalice', CAST(139.90 AS Decimal(18, 2)), 0)
+SET IDENTITY_INSERT [dbo].[ShopItems] OFF

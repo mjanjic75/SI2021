@@ -36,5 +36,10 @@ namespace MagacinBusiness
                 return "Neuspešan unos, došlo je do greške!";
             }
         }
+
+        public List<Item> GetItemsWithPriceLessThan(decimal price)
+        {
+            return this.itemRepository.GetAllItems().Where(i => i.Price <= price).ToList();
+        }
     }
 }

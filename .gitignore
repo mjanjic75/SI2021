@@ -1,0 +1,11 @@
+.vs/
+Magacin/obj/
+MagacinBusiness/obj/Debug/MagacinBusiness.csproj.FileListAbsolute.txt
+MagacinBusinessTests/obj/
+MagacinBusiness/obj/
+MagacinData/obj/
+Shared/obj/
+Magacin/bin/
+MagacinPresentationLayerTests/bin/
+MagacinPresentationLayerTests/obj/Debug/MagacinPresentationLayerTests.csproj.CopyComplete
+packages/

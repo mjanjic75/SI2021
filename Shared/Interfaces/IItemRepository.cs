@@ -11,5 +11,7 @@ namespace Shared.Interfaces
     {
         List<Item> GetAllItems();
         int InsertItem(Item item);
+        int UpdateItem(Item item);
+        int DeleteItem(int id);
     }
 }

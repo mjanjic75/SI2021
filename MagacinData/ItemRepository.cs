@@ -30,6 +30,7 @@ namespace MagacinData
             while (dataReader.Read())
             {
                 Item item = new Item();
+                item.Id = dataReader.GetInt32(0);
                 item.Name = dataReader.GetString(1);
                 item.Price = dataReader.GetDecimal(2);
                 item.Discount = dataReader.GetInt32(3);
@@ -57,6 +58,39 @@ namespace MagacinData
                 return command.ExecuteNonQuery();
             }
 
+        }
+
+        public int UpdateItem(Item item)
+        {
+            using (SqlConnection sqlConnection = new SqlConnection(Constants.connString))
+            {
+                // Može SQL upit da se doda i preko parametara, ali za veći broj polja/atributa je...
+
+                string sqlCommand = "UPDATE Items SET Name = @Name, Price = @Price, Discount = @Discount WHERE Id = @Id";
+                SqlCommand command = new SqlCommand(sqlCommand,sqlConnection);
+                command.Parameters.AddWithValue("@Id", item.Id);
+                command.Parameters.AddWithValue("@Name", item.Name);
+                command.Parameters.AddWithValue("@Price", item.Price);
+                command.Parameters.AddWithValue("@Discount", item.Discount);
+
+                sqlConnection.Open();
+
+                return command.ExecuteNonQuery();
+            }
+        }
+
+        public int DeleteItem(int id)
+        {
+            using (SqlConnection sqlConnection = new SqlConnection(Constants.connString))
+            {
+                sqlConnection.Open();
+
+                SqlCommand command = new SqlCommand();
+                command.Connection = sqlConnection;
+                command.CommandText = "DELETE FROM Items WHERE Id = " + id;
+
+                return command.ExecuteNonQuery();
+            }
         }
     }
 }

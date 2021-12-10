@@ -41,5 +41,33 @@ namespace MagacinBusiness
         {
             return this.itemRepository.GetAllItems().Where(i => i.Price <= price).ToList();
         }
+
+        public string UpdateItem(Item item)
+        {
+            int rowsAffected = this.itemRepository.UpdateItem(item);
+
+            if (rowsAffected > 0)
+            {
+                return "Uspešna izmena u bazi podataka!";
+            }
+            else
+            {
+                return "Neuspešna izmena, došlo je do greške!";
+            }
+        }
+
+        public string DeleteItem(int id)
+        {
+            int rowsAffected = this.itemRepository.DeleteItem(id);
+
+            if (rowsAffected > 0)
+            {
+                return "Uspešno obrisan podatak iz baze podataka!";
+            }
+            else
+            {
+                return "Brisanje nije uspelo, došlo je do greške!";
+            }
+        }
     }
 }

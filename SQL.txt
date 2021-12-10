@@ -14,3 +14,18 @@ INSERT INTO [dbo].[Items] ([Id], [Name], [Price], [Discount]) VALUES (2, N'Čoko
 INSERT INTO [dbo].[Items] ([Id], [Name], [Price], [Discount]) VALUES (4, N'Čokolada Najlepše želje 300g', CAST(265.90 AS Decimal(18, 2)), 15)
 INSERT INTO [dbo].[Items] ([Id], [Name], [Price], [Discount]) VALUES (5, N'Pivo Heineken 0.5L limenka', CAST(110.00 AS Decimal(18, 2)), 10)
 SET IDENTITY_INSERT [dbo].[Items] OFF
+
+
+
+
+SET IDENTITY_INSERT [dbo].[Items] ON
+INSERT INTO [dbo].[Items] ([Id], [Name], [Price], [Discount]) VALUES (1, N'Kafa Grand 100g', CAST(126.55 AS Decimal(18, 2)), 10)
+INSERT INTO [dbo].[Items] ([Id], [Name], [Price], [Discount]) VALUES (2, N'Čokolada Milka 300g lešnik', CAST(425.80 AS Decimal(18, 2)), 25)
+INSERT INTO [dbo].[Items] ([Id], [Name], [Price], [Discount]) VALUES (4, N'Čokolada Najlepše želje 300g', CAST(265.90 AS Decimal(18, 2)), 15)
+INSERT INTO [dbo].[Items] ([Id], [Name], [Price], [Discount]) VALUES (5, N'Pivo Heineken 0.5L limenka', CAST(110.00 AS Decimal(18, 2)), 10)
+INSERT INTO [dbo].[Items] ([Id], [Name], [Price], [Discount]) VALUES (1002, N'Jabuka', CAST(125.00 AS Decimal(18, 2)), 10)
+INSERT INTO [dbo].[Items] ([Id], [Name], [Price], [Discount]) VALUES (1003, N'Vino Vranac Pro Corde', CAST(959.00 AS Decimal(18, 2)), 15)
+INSERT INTO [dbo].[Items] ([Id], [Name], [Price], [Discount]) VALUES (1004, N'Pivo Heineken 0.5l limenka', CAST(99.99 AS Decimal(18, 2)), 0)
+INSERT INTO [dbo].[Items] ([Id], [Name], [Price], [Discount]) VALUES (1005, N'Haribo gumene bombone', CAST(125.00 AS Decimal(18, 2)), 10)
+INSERT INTO [dbo].[Items] ([Id], [Name], [Price], [Discount]) VALUES (2002, N'Rakija Viljamovka', CAST(1785.90 AS Decimal(18, 2)), 15)
+SET IDENTITY_INSERT [dbo].[Items] OFF

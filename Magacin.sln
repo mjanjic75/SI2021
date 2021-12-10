@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagacinBusinessTests", "Mag
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagacinPresentationLayerTests", "MagacinPresentationLayerTests\MagacinPresentationLayerTests.csproj", "{74FF04E3-76C6-4A71-96AF-1C42B117EC4D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagacinDataTests", "MagacinDataTests\MagacinDataTests.csproj", "{87BDFCFE-173A-4749-89D0-F04B46461227}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{74FF04E3-76C6-4A71-96AF-1C42B117EC4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74FF04E3-76C6-4A71-96AF-1C42B117EC4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{74FF04E3-76C6-4A71-96AF-1C42B117EC4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87BDFCFE-173A-4749-89D0-F04B46461227}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87BDFCFE-173A-4749-89D0-F04B46461227}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87BDFCFE-173A-4749-89D0-F04B46461227}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87BDFCFE-173A-4749-89D0-F04B46461227}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -54,6 +60,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{C8EA7DBD-8C47-467F-A8BF-E9E521F11E65} = {C0192C52-C1AC-4842-BEDE-20AA0AEC892A}
 		{74FF04E3-76C6-4A71-96AF-1C42B117EC4D} = {C0192C52-C1AC-4842-BEDE-20AA0AEC892A}
+		{87BDFCFE-173A-4749-89D0-F04B46461227} = {C0192C52-C1AC-4842-BEDE-20AA0AEC892A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B7774753-D209-4CA0-910A-CF27F82B2609}

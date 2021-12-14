@@ -1,0 +1,14 @@
+CREATE TABLE [dbo].[Products] (
+    [Id]          INT            IDENTITY (1, 1) NOT NULL,
+    [Name]        NVARCHAR (50)  NOT NULL,
+    [Description] NVARCHAR (200) NULL,
+    [ExpiryDate]  DATETIME       NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+
+
+SET IDENTITY_INSERT [dbo].[Products] ON
+INSERT INTO [dbo].[Products] ([Id], [Name], [Description], [ExpiryDate]) VALUES (1, N'Sladoled Čoko-moko', N'Sladoled sa čokoladom i lešnikom', N'2021-01-20 12:00:00')
+INSERT INTO [dbo].[Products] ([Id], [Name], [Description], [ExpiryDate]) VALUES (2, N'Medovaca', N'Rakija 25vol sa medom, 0.33L', N'2040-12-31 12:49:13')
+SET IDENTITY_INSERT [dbo].[Products] OFF
